@@ -128,3 +128,9 @@ void AFirst_TestCharacter::Look(const FInputActionValue& Value)
 		AddControllerPitchInput(LookAxisVector.Y);
 	}
 }
+
+void AFirst_TestCharacter::StructTestFunc()
+{
+	StructTest Temp = {1.0f, 1};
+	StSaved = Temp;
+}

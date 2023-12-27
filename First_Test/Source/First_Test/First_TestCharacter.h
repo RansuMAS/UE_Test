@@ -15,6 +15,12 @@ struct FInputActionValue;
 
 DECLARE_LOG_CATEGORY_EXTERN(LogTemplateCharacter, Log, All);
 
+struct StructTest
+{
+	float Para1;
+	int32 Para2;
+};
+
 UCLASS(config=Game)
 class AFirst_TestCharacter : public ACharacter
 {
@@ -69,5 +75,11 @@ public:
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
 	/** Returns FollowCamera subobject **/
 	FORCEINLINE class UCameraComponent* GetFollowCamera() const { return FollowCamera; }
+
+
+public:
+	StructTest StSaved;
+
+	void StructTestFunc();
 };
 
